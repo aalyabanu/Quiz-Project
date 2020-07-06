@@ -1,0 +1,159 @@
+.jumbotron 
+{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: white;
+    background-color:#3ea48c;
+    height: 60px;
+    margin-top: 20px;
+    padding-top:20px;
+    text-align: center;
+
+
+}
+
+body{
+    font-size: 20px;
+    font-family: monospace;
+}
+
+#container{
+    margin : 20px auto;
+    background-color: white;
+    height: 80%;
+    width : 700px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+}
+/* Landing section */
+
+#startimage{
+    height:calc(0.5*100vh);
+    width: 100%;
+    padding-top:20px;
+}
+
+#quizMsg{
+    padding: 20px;
+    margin-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: maroon;
+    font-size: medium;
+
+}
+
+#startbutton{
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: palevioletred;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  }
+
+
+#startbutton:hover{
+    border: 3px solid lightseagreen;
+    color : lightseagreen;
+}
+
+
+/* quiz starts */
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+
+
+#questionImage img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+    width: 70%;
+    height: calc(100vh - 100px);
+}
+
+
+#question p{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+    width: 50%;
+    padding-bottom:30px;  
+    font-size: 1.1em; 
+}
+
+
+#choices{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+    width: 50%;
+    margin-bottom:20px;
+
+}
+.choice{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+    width: 50%;
+    text-align: center;
+    border : 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    padding : 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    bottom:0px;
+    background-color: wheat;
+}
+.choice:hover{
+    border : 2px solid grey;
+    font-weight: bold;
+    background-color: teal;
+    color: white;
+}
+
+/* Results displayed  */
+
+#resultsContainer{
+    height:200px;
+    padding : 80px 20px;
+    background-color:teal; 
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+    text-align: center;
+    font-size: larger;
+    color:white;
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

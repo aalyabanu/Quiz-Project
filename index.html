@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="container-fluid">
+        <!--Initial landing section-->
+        <div id="start">
+            <header class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <div class="h2 text-center"> Quiz Time</div>
+                </div>
+                <!--container-->
+            </header>
+
+            <img src="images/startimage.jpg" id="startimage" alt="image of world map" />
+            <div id="quizMsg">
+                <h2>How good is your international knowledge? Take this easy quiz and see how
+                    well you do!</h2>
+            </div>
+
+            <div id="startbutton"><input type="button" value="Start Quiz" class="btn btn-success text-center"
+                    onclick="startQuiz()" /></div>
+
+        </div>
+
+        <!--starting the quiz-->
+        <div id="quiz" style="display: none;">
+            <div id="questionImage"></div>
+            <div class="row">
+                <div id="question"></div>
+                <div id="choices">
+                    <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                    <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                    <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                </div>
+            </div>
+            <!--row-->
+        </div>
+        <!--quiz-->
+
+        <!-- Displaying results-->
+        <div id="resultsContainer" style="display: none"></div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
