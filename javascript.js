@@ -18,18 +18,18 @@ let questions = [
         choiceC: "Rambutan",
         correct: "A"
     }, {
-        question: "What is the name of the tallest tower in the world?",
-        imgSrc: "images/tallesttower.jpg",
-        choiceA: "Marina Tower",
-        choiceB: "Burj Khalifa",
-        choiceC: "Petronas Tower",
+        question: "which country is famous for Maple syrup?",
+        imgSrc: "images/maplesyrup.jpg",
+        choiceA: "Italy",
+        choiceB: "Canada",
+        choiceC: "Australia",
         correct: "B"
     }, {
-        question: "Where was the movie <b>The Hobbit </b> filmed in?",
-        imgSrc: "images/hobbit.jpg",
-        choiceA: "New Zealand",
-        choiceB: "Ireland",
-        choiceC: "Greenland",
+        question: "What is the name of the country highlighted in red",
+        imgSrc: "images/worldmap.png",
+        choiceA: "India",
+        choiceB: "Sri Lanka",
+        choiceC: "Bhutan",
         correct: "A"
     }, {
         question: "Where is the Mount. Everest located?",
