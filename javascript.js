@@ -60,9 +60,34 @@ let questions = [
 const finalIndex = questions.length - 1;
 let currentIndex = 0;
 let score = 0;
+var indexArray=[];
+var N=5; //number of question to be asked per quiz
+var count=0;
 
-// generate a question
-function generateQuestion() {
+//generate random index
+
+for (let i=0; i<questions.length; i++){
+    indexArray.push(i);
+} //[0,1,2,3...]
+
+var indexArray=fisherYatesShuffle(indexArray); //returns shuffled index Array
+
+console.log(indexArray);
+
+function fisherYatesShuffle(a) {
+      var j, x, i;
+      for (i = a.length - 1; i > 0; i--) {
+          j = Math.floor(Math.random() * (i + 1));
+          x = a[i];
+          a[i] = a[j];
+          a[j] = x;
+      }
+      return a;
+  }
+
+  
+function generateQuestion(currentIndex) {
+
     let q = questions[currentIndex];
     question.innerHTML = "<p>" + q.question + "</p>";
     questionImage.innerHTML = "<img src=" + q.imgSrc + ">";
@@ -76,34 +101,36 @@ start.addEventListener("click", startQuiz);
 // start quiz
 function startQuiz() {
     start.style.display = "none";
-    generateQuestion();
+    generateQuestion(indexArray[count]);
     quiz.style.display = "block";
+
 }
 
-answerIsWrong();
-if (currentIndex < finalIndex) {
-    currentIndex++;
-    generateQuestion();
+if (count < N-1) {
+    generateQuestion(indexArray[count]);
+    count++;
+    function checkAnswer(answer) {
+        if (answer == questions[count].correct) {
+            // If the answer is correct
+            score++;
+        } else {
+            score = score;
+        }
+    console.log("current score",score)
+        if (count < N-1) {
+            count++;
+            generateQuestion(indexArray[count]);
+        } else {
+            showResult();
+        }
+    }
 } else {
     // end the quiz and show the score
     showResult();
 }
 
 // checking answers
-function checkAnswer(answer) {
-    if (answer == questions[currentIndex].correct) {
-        // If the answer is correct
-        score++;
-    } else {
-        score = score;
-    }
-    if (currentIndex < finalIndex) {
-        currentIndex++;
-        generateQuestion();
-    } else {
-        showResult();
-    }
-}
+
 // score display
 function showResult() {
     start.style.display = "none";
@@ -111,6 +138,6 @@ function showResult() {
     scoreDiv.style.display = "block";
 
     // calculating percentage score and displaying results
-    const scorePerCent = Math.round(100 * score / questions.length);
-    scoreDiv.innerHTML = "You have answered " + score + " out of " + questions.length + " questions correctly." + "<br/><br/>" + "Your score: " + scorePerCent + "%";
+    const scorePerCent = Math.round(100 * score /(N-1));
+    scoreDiv.innerHTML = "You have answered " + score + " out of " + N-1 + " questions correctly." + "<br/><br/>" + "Your score: " + scorePerCent + "%";
 }
