@@ -25,13 +25,6 @@ let questions = [
         choiceC: "Australia",
         correct: "B"
     }, {
-        question: "What is the name of the country highlighted in red",
-        imgSrc: "images/worldmap.png",
-        choiceA: "India",
-        choiceB: "Sri Lanka",
-        choiceC: "Bhutan",
-        correct: "A"
-    }, {
         question: "Where is the Mount. Everest located?",
         imgSrc: "images/everest.jpg",
         choiceA: "Nepal",
