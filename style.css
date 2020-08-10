@@ -123,11 +123,6 @@ body{
     margin:0;
 }
 
-
-#choices{
-
-
-}
 .choice{
 background-color:teal;
 padding:15px;
@@ -147,20 +142,12 @@ cursor: pointer;
 
 /* Results displayed  */
 
-
-#resultsContainer{
-    height:200px;
-    padding : 80px 20px;
-    background-color:teal; 
-    border-radius: 5px;
-    box-shadow: 0px 5px 15px 0px;
-    position: relative;
+   .result-box {
     text-align: center;
-    font-size: larger;
+    background-color: teal;
     color:white;
+  }
   
- 
-
 
 
 

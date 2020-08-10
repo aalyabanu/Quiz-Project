@@ -12,12 +12,13 @@ const scoreDiv = document.getElementById("resultsContainer");
 // questions array
 let questions = [
   {
-    question: "What is the name of this popular tropical fruit?",
+    question:
+      "Egyptian sphinxes have the head of a ram or a person and the body of what animal?",
     // imgSrc: "images/tropicalfruit.jpg",
-    choiceA: "Durian",
-    choiceB: "Jackfruit",
-    choiceC: "Rambutan",
-    choiceD: "Ackee",
+    choiceA: "Lion",
+    choiceB: "Snake",
+    choiceC: "Cow",
+    choiceD: "Elephant",
     correct: "A",
   },
   {
