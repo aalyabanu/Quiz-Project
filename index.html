@@ -9,9 +9,9 @@
 
 <body>
 
-    <div id="container-fluid">
+    <div id="container">
         <!--Initial landing section-->
-        <div id="start">
+        <div id="start" class="flex-center flex-column">
             <header class="jumbotron jumbotron-fluid">
                 <div class="container">
                     <div class="h2 text-center"> Quiz Time</div>
@@ -20,25 +20,24 @@
             </header>
 
             <img src="images/startimage.jpg" id="startimage" alt="image of world map" />
-            <div id="quizMsg">
+            <div id="quizMsg" class="flex-column flex-center">
                 <h2>How good is your international knowledge? Take this easy quiz and see how
                     well you do!</h2>
             </div>
-
-            <div id="startbutton"><input type="button" value="Start Quiz" class="btn btn-success text-center"
-                    onclick="startQuiz()" /></div>
-
+            <input id="startbutton" class="btn type="button" value="Start Quiz" class="btn btn-success text-center"
+                onclick="startQuiz()" />         
         </div>
 
         <!--starting the quiz-->
-        <div id="quiz" style="display: none;">
-            <div id="questionImage"></div>
+        <div id="quiz" class="quiz-box custom-box" style="display: none;">
+            <!-- <div id="questionImage" class="quiz-image"></div> -->
             <div class="row">
-                <div id="question"></div>
-                <div id="choices">
+                <div id="question" class="question-text"></div>
+                <div id="choices" class="option container">
                     <div class="choice" id="A" onclick="checkAnswer('A')"></div>
                     <div class="choice" id="B" onclick="checkAnswer('B')"></div>
                     <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                    <div class="choice" id="D" onclick="checkAnswer('D')"></div>
                 </div>
             </div>
             <!--row-->
