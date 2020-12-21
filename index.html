@@ -1,53 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Quiz</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <div id="container">
-        <!--Initial landing section-->
-        <div id="start" class="flex-center flex-column">
-            <header class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <div class="h2 text-center"> Quiz Time</div>
-                </div>
-                <!--container-->
-            </header>
+      <!--Initial landing section-->
+      <div id="start" class="flex-center flex-column">
+        <header class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <div class="h2 text-center">Quiz Time</div>
+          </div>
+          <!--container-->
+        </header>
 
-            <img src="images/startimage.jpg" id="startimage" alt="image of world map" />
-            <div id="quizMsg" class="flex-column flex-center">
-                <h2>How good is your international knowledge? Take this easy quiz and see how
-                    well you do!</h2>
-            </div>
-            <input id="startbutton" class="btn type="button" value="Start Quiz" class="btn btn-success text-center"
-                onclick="startQuiz()" />         
+        <img
+          src="images/startimage.jpg"
+          id="startimage"
+          alt="image of world map"
+        />
+        <div id="quizMsg" class="flex-column flex-center">
+          <h2>
+            How good is your international knowledge? Take this easy quiz and
+            see how well you do!
+          </h2>
         </div>
+        <input id="startbutton" class="btn type="button" value="Start Quiz"
+        class="btn btn-success text-center" onclick="startQuiz()" />
+      </div>
 
-        <!--starting the quiz-->
-        <div id="quiz" class="quiz-box custom-box" style="display: none;">
-            <!-- <div id="questionImage" class="quiz-image"></div> -->
-            <div class="row">
-                <div id="question" class="question-text"></div>
-                <div id="choices" class="option container">
-                    <div class="choice" id="A" onclick="checkAnswer('A')"></div>
-                    <div class="choice" id="B" onclick="checkAnswer('B')"></div>
-                    <div class="choice" id="C" onclick="checkAnswer('C')"></div>
-                    <div class="choice" id="D" onclick="checkAnswer('D')"></div>
-                </div>
-            </div>
-            <!--row-->
+      <!--starting the quiz-->
+      <div id="quiz" class="quiz-box custom-box" style="display: none;">
+        <!-- <div id="questionImage" class="quiz-image"></div> -->
+        <div class="row">
+          <div id="question" class="question-text"></div>
+          <div id="choices" class="option container">
+            <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+            <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+            <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+            <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+          </div>
         </div>
-        <!--quiz-->
+        <!--row-->
+      </div>
+      <!--quiz-->
 
-        <!-- Displaying results-->
-        <div id="resultsContainer" class="result-box custom-box" style="display: none"></div>
+      <!-- Displaying results-->
+      <div
+        id="resultsContainer"
+        class="result-box custom-box"
+        style="display: none;"
+      ></div>
     </div>
     <script src="javascript.js"></script>
-</body>
-
+  </body>
 </html>
