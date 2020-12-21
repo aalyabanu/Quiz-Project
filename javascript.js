@@ -54,6 +54,7 @@ let questions = [
     choiceA: "Malayalam",
     choiceB: "Mali",
     choiceC: "Malay",
+    choiceD:"Cantonese",
     correct: "C",
   },
 ];
